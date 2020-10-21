@@ -31,7 +31,7 @@ class App extends Component {
         });
       }
       else
-      setCurrentUser(userAuth);
+        setCurrentUser(userAuth);
     });
   }
 
@@ -55,10 +55,10 @@ class App extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
-//setCurrentUser(user) returns an action, then is dispatches to every reducers
+//setCurrentUser(user) returns an action, then it dispatches to every reducer
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
